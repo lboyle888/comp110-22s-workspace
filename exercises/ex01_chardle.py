@@ -1,7 +1,8 @@
-"""Chardle Code - EX 01"""
+"""Chardle Code - EX 01."""
+__author__ = "730473612"
+
 word: str = input("Enter a 5-character word: ")
 letter: str = input("Enter a single character: ")
-print("Searching for " + letter + " in " + word)
 count: int = 0
 if (len(word) != 5):
     print("Error: Word must contain 5 characters")
@@ -9,6 +10,7 @@ if (len(word) != 5):
 if (len(letter) != 1):
     print("Error: Character must be a single character.")
     exit()
+print("Searching for " + letter + " in " + word)
 if (word[0] == letter):
     print(letter + " found at index 0")
     count += 1
@@ -32,6 +34,3 @@ if count > 0:
         print("1 instance of " + letter + " found in " + word)
 else:
     print("No instances of " + letter + " found in " + word)
-
-
-_author_ = "730473612"
