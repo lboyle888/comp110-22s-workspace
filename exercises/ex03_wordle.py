@@ -1,10 +1,10 @@
-"""Repeating Wordle using function definitions."""
+"""Playable Wordle Using Functions."""
 
 __author__ = "730473612"
 
 
 def contains_char(given_word: str, char: str) -> bool:
-    """searches for given character in inputted string, returns true if present, false if not."""
+    """Searches for given character in inputted string, returns true if present, false if not."""
     assert len(char) == 1
     i: int = 0
     while i < len(given_word):
@@ -15,7 +15,7 @@ def contains_char(given_word: str, char: str) -> bool:
 
 
 def emojified(guess: str, secret: str) -> str:
-    """emojifies the guessed word when compared to secret word."""
+    """Emojifies the guessed word when compared to secret word."""
     assert len(guess) == len(secret)
     WHITE_BOX: str = "\U00002B1C"
     GREEN_BOX: str = "\U0001F7E9"
@@ -35,7 +35,7 @@ def emojified(guess: str, secret: str) -> str:
 
 
 def input_guess(length: int) -> str:
-    """takes an input from user, checks length, and returns input if correct length"""
+    """Takes an input from user, checks length, and returns input if correct length."""
     guess: str = input(f"Enter a {length} character word: ")
     while len(guess) != length:
         guess = input(f"That wasn't {length} chars! Try again: ")
@@ -45,7 +45,7 @@ def input_guess(length: int) -> str:
 def main() -> None:
     """The entrypoint of the program and main game loop."""
     turns: int = 1
-    codes: str = "champ"
+    codes: str = "codes"
     win: bool = False
     while turns <= 6 and not(win):
         print(f"== Turn {turns}/6")
@@ -59,8 +59,8 @@ def main() -> None:
             turns += 1
     if win:
         print(f"You won in {turns}/6 turns!")
-    if not win:
-        print("Sorry, try again tomorrow!")
+    else:
+        print("X/6 - Sorry, try again tomorrow!")
 
 
 if __name__ == "__main__":
