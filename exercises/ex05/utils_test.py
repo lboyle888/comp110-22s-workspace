@@ -72,4 +72,3 @@ def test_concat_use_2() -> None:
     first: list[int] = [-1, -1, 10, 100]
     second: list[int] = [-2, -2, 20, 200]
     assert concat(first, second) == [-1, -1, 10, 100, -2, -2, 20, 200] 
-    
